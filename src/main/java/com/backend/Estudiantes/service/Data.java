@@ -1,13 +1,15 @@
 package com.backend.Estudiantes.service;
 
+import com.backend.Estudiantes.model.Role;
 import com.backend.Estudiantes.model.Usuario;
 import com.backend.Estudiantes.repository.UsuarioRepository;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AuthService {
+public class Data {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -15,16 +17,16 @@ public class AuthService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public Usuario authenticate(String email, String password) {
-        Usuario usuario = usuarioRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
-
-
-        if(!passwordEncoder.matches(password, usuario.getPassword())) {
-            throw new RuntimeException("Contraseña incorrecta");
-        }
-
-        return usuario;
+    @PostConstruct
+    public void init(){
+//        Usuario admin = new Usuario();
+//        admin.setEmail("pepe@gmail.com");
+//        admin.setPassword(passwordEncoder.encode("admin123"));
+//        admin.setRol(Role.ADMIN);
+//        admin.setNombre("Carlos");
+//        admin.setApellido("Perez");
+//
+//        usuarioRepository.save(admin);
     }
-
 }
+

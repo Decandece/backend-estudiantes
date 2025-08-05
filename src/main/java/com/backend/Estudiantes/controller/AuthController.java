@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -20,19 +21,25 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-    @PostMapping("Login")
-    public ResponseEntity<?> Login(@Valid @RequestBody LoginRequest request){
+    //Endpoint de login
+    @PostMapping("login")
+    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
+
         try{
-            Usuario usuario = authService.authenticate(request.getEmail() , request.getPassword());
+            Usuario usuario = authService.authenticate(request.getEmail(), request.getPassword());
             return ResponseEntity.ok(Map.of(
-                    "Message" , "Login exitoso",
-                    "Email" , usuario.getEmail(),
-                    "Role" , usuario.getRol().name()
+                    "message", "Login exitoso!",
+                    "email", usuario.getEmail(),
+                    "rol", usuario.getRol().name()
             ));
-        }catch (Exception e){
+        } catch (Exception e) {
             return ResponseEntity.badRequest().body(Map.of(
-                    "Error" , e.getMessage()
+                    "error", e.getMessage()
             ));
         }
     }
+
+
 }
+
+
