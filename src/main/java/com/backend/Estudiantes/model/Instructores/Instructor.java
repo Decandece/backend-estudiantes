@@ -1,5 +1,6 @@
-package com.backend.Estudiantes.model;
+package com.backend.Estudiantes.model.Instructores;
 
+import com.backend.Estudiantes.model.Usuarios.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

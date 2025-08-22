@@ -1,7 +1,7 @@
 package com.backend.Estudiantes.controller;
 
 import com.backend.Estudiantes.dto.LoginRequest;
-import com.backend.Estudiantes.model.Usuario;
+import com.backend.Estudiantes.model.Usuarios.Usuario;
 import com.backend.Estudiantes.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.backend.Estudiantes.repositories;
 
 import com.backend.Estudiantes.model.Role;
-import com.backend.Estudiantes.model.Usuario;
+import com.backend.Estudiantes.model.Usuarios.Usuario;
 import com.backend.Estudiantes.repository.UsuarioRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

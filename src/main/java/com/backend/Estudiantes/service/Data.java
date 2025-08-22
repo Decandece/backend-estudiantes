@@ -1,7 +1,5 @@
 package com.backend.Estudiantes.service;
 
-import com.backend.Estudiantes.model.Role;
-import com.backend.Estudiantes.model.Usuario;
 import com.backend.Estudiantes.repository.UsuarioRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;

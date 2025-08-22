@@ -1,6 +1,6 @@
 package com.backend.Estudiantes.service;
 
-import com.backend.Estudiantes.model.Usuario;
+import com.backend.Estudiantes.model.Usuarios.Usuario;
 import com.backend.Estudiantes.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

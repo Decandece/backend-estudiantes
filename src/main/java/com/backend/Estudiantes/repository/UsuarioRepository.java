@@ -1,6 +1,6 @@
 package com.backend.Estudiantes.repository;
 
-import com.backend.Estudiantes.model.Usuario;
+import com.backend.Estudiantes.model.Usuarios.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -2,7 +2,7 @@ package com.backend.Estudiantes.services;
 
 
 import com.backend.Estudiantes.model.Role;
-import com.backend.Estudiantes.model.Usuario;
+import com.backend.Estudiantes.model.Usuarios.Usuario;
 import com.backend.Estudiantes.repository.UsuarioRepository;
 import com.backend.Estudiantes.service.UsuarioDetailsService;
 import org.junit.jupiter.api.Test;
